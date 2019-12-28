@@ -1,6 +1,11 @@
 <section class="hero is-info">
     <div class="hero-body">
-        <h1 class="title">Buildings</h1>
+        <h1 class="title">
+            <span class="icon">
+                <i class="fas fa-building"></i>
+            </span>
+            Buildings
+        </h1>
     </div>
 </section>
 
@@ -13,5 +18,13 @@
                 </div>
             </div>
         <% end %>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="control">
+            <%= link_to "Create a new Building", new_building_path, class: 'button is-info is-large' %>
+        </div>
     </div>
 </section>

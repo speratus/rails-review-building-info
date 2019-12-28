@@ -1,0 +1,36 @@
+<%= form_for(@building) do |f| %>
+    
+    <div class="field">
+        <%= f.label :name, class: 'label' %>
+        <div class="control">
+            <%= f.text_field :name, value: @building.name, placeholder: 'Building Name', class: 'input' %>
+        </div>
+    </div>
+
+    <div class="field">
+        <%= f.label :owner, class: 'label' %>
+        <div class='control'>
+            <%= f.text_field :owner, value: @building.owner, placeholder: 'Owner Name', class: 'input' %>
+        </div>
+    </div>
+
+    <div class="field">
+        <%= f.label :leasee, class: 'label' %>
+        <div class="control">
+            <%= f.text_field :leasee, value: @building.leasee, placeholder: 'Leasee Name', class: 'input' %>
+        </div>
+    </div>
+
+    <div class="field">
+        <%= f.label :district_id, class: 'label' %>
+        <div class="control">
+            <div class="select">
+                <%= f.collection_select :district_id, District.all, :id, :name, {prompt: true} %>
+            </div>
+        </div>
+    </div>
+
+    <%= f.submit class: 'button is-info is-large' %>
+
+
+<% end %>
