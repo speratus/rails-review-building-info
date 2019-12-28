@@ -1,0 +1,43 @@
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                <%= @district.name %>
+            </h1>
+            <h2 class="subtitle">
+                <%= @district.district_type %>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h1 class="title">Buildings</h1>
+</section>
+
+<section class="section">
+    <div class="container">
+        <% @district.buildings.each do |building| %>
+            <div class="level">
+                <div class="level-left">
+                        <div class="level-item">
+                            <%= link_to building.name, building_path(building), class: "is-size-3" %>
+                        </div>
+                </div>
+                <div class="level-right">
+                    <p class="level-item">
+                        <strong>
+                            <%= building.owner %>
+                        </strong>
+                    </p>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</section>
+
+<section class="section">
+    <div class="control">
+        <%= link_to "Edit This District", edit_district_path(@district), class: "button is-primary is-large" %>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+<section class="hero is-info">
+    <div class="hero-body">
+        <h1 class="title">
+            <%= @building.name %>
+        </h1>
+
+        <h2 class="subtitle">
+            <%= link_to @building.district.name, district_path(@building.district) %>
+        </h2>
+    </div>
+</section>
+
+<section class="section">
+    <div class="level">
+        <div class="level-left">
+            <p class="level-item">
+                <strong>Owner: </strong>
+            </p>
+        </div>
+        <div class="level-right">
+            <p class="level-item">
+                <%= @building.owner %>
+            </p>
+        </div>
+    </div>
+    <div class="level">
+        <div class="level-left">
+            <p class="level-item">
+                <strong>Leasee: </strong>
+            </p>
+        </div>
+        <div class="level-right">
+            <p class="level-item">
+                <%= @building.leasee %>
+            </p>
+        </div>
+    </div>
+</section>

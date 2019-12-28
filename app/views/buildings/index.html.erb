@@ -1,0 +1,17 @@
+<section class="hero is-info">
+    <div class="hero-body">
+        <h1 class="title">Buildings</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <% @buildings.each do |building| %>
+            <div class="level">
+                <div class="level-left">
+                    <%= link_to building.name, building_path(building), class: "is-size-5" %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</section>

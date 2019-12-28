@@ -1,0 +1,19 @@
+<%= form_for(@district) do |f| %>
+    <div class="field">
+        <%= f.label :name, class: "label" %>
+        <div class="control">
+            <%= f.text_field :name, class: "input", value: @district.name, placeholder: "Name" %>
+        </div>
+    </div>
+
+    <div class="field">
+        <%= f.label :district_type, class: "label" %>
+        <div class="control">
+            <%= f.text_field :district_type, class: "input", value: @district.district_type, placeholder: "Type" %>
+        </div>
+    </div>
+
+    <div class="control">
+        <%= f.submit class: "button is-primary" %>
+    </div>
+<% end %>

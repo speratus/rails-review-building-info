@@ -1,0 +1,27 @@
+<section class="hero is-primary">
+    <div class="hero-body">
+        <h1 class="title">
+            Districts
+        </h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <% @districts.each do |district| %>
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <%= link_to district.name, district_path(district), class: "is-size-5" %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</section>
+
+<section class="section">
+    <div class="control">
+        <%= link_to "New District", new_district_path, class: "button is-primary is-large" %>
+    </div>
+</section>
